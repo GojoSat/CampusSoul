@@ -1,0 +1,14 @@
+2026.4.17
+
+今天规划了学习路径计划，更新了readme文档
+
+安装了git,vscode，配置了git环境变量
+
+在viscode安装了GitLens、Jupyter、Ruff、Error Lens、Path Intellisense、Todo Tree插件（虽然目前不了解这些，AI推荐）
+
+如果利用vscode
+1.开始写代码前：先执行一次 git pull，确保本地是最新版本。
+2.写完代码后：执行 git add → git commit → git push，把改动上传到 GitHub。
+3.下次再写之前：又回到步骤 1。
+
+按 F1 键，输入 Git: Clone，clone自己的github项目然后编辑
