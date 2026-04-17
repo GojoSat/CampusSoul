@@ -11,4 +11,6 @@
 2.写完代码后：执行 git add → git commit → git push，把改动上传到 GitHub。
 3.下次再写之前：又回到步骤 1。
 
+或者直接点击更新按钮即可
+
 按 F1 键，输入 Git: Clone，clone自己的github项目然后编辑
