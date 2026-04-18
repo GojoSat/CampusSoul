@@ -1,0 +1,95 @@
+
+✅ 正确的操作流程（图形界面版）
+假设你已经在 VS Code 里写好了新代码，并保存了文件（Ctrl+S）。
+
+打开“源代码管理”面板：点击左侧边栏的树枝图标 🌿。
+
+暂存改动：在 “Changes” 列表里，把鼠标悬停在你修改的文件上，点击右边的 + 号。文件会从 “Changes” 移动到 “Staged Changes”。
+
+提交改动：在面板顶部的输入框中，写一句说明（比如 “添加了 DeepSeek API 调用代码”），然后点击 ✓ 提交 按钮。
+
+推送到 GitHub：点击左下角状态栏的 🔄 同步更改 按钮。
+
+只有执行完第 4 步，你的代码才会出现在 GitHub 网页上。
+
+
+
+# 1. 暂存所有改动
+git add .
+
+# 2. 提交到本地仓库（引号里写你的提交说明）
+git commit -m "添加 AI 对话模块"
+
+# 3. 推送到 GitHub
+git push origin main
+
+如果第二步出现错误，则
+
+git pull origin main --no-rebase
+
+如果合并顺利，终端会进入一个文本编辑器界面让你写合并说明。直接 关闭那个窗口 或按 :wq（如果看到 vim 界面）退出即可。
+
+如果有冲突（conflict），终端会提示哪些文件有冲突，稍复杂些，但你目前应该不会遇到。
+再执行
+git push origin main
+
+ 如果 git pull 也报错
+有时候会提示 fatal: refusing to merge unrelated histories（无关历史拒绝合并）。这时用这个命令强制关联：
+git pull origin main --allow-unrelated-histories
+
+然后再git push
+
+ 以后怎么避免这个问题？
+养成好习惯：
+
+每天开始写代码前，先执行一次 git pull。
+
+尽量避免在 GitHub 网页上直接编辑文件（除非只是改 README 这种纯文本）。
+
+如果确实在网页上改过，回来写代码前一定先 git pull。
+
+git pull方法
+🖱️ 方法一：VS Code 图形界面（推荐）
+点击左侧边栏的 源代码管理 图标（树枝形状）。
+
+在面板的右上角，找到 ... 三个点的按钮，点击它。
+
+在弹出的菜单里选择 拉取（英文是 Pull）。
+
+等待左下角状态栏的同步动画转完，就完成了。
+
+⌨️ 方法二：终端命令
+在 VS Code 终端（`Ctrl + ``）里直接输入：
+git pull origin main
+
+
+Pull 完成之后做什么？
+git pull 成功后，你就可以再次执行推送了：
+
+bash
+git push origin main
+
+
+
+或者直接点击左下角的 🔄 同步更改 按钮，它会自动完成推送。
+
+💡 如果 Pull 时进入了奇怪的界面
+有时候执行 git pull 后，终端会进入一个全屏的文本编辑器（通常是 Vim），让你写合并说明。
+
+直接关掉它：按 :q 然后回车（注意有个冒号）。
+
+如果退不出来，就按 Esc 键几次，然后输入 :q! 回车强制退出。
+
+退出后合并就已经完成了，不需要额外操作。
+
+push的时候，必须写# 1. 暂存所有改动
+git add .
+
+# 2. 提交到本地仓库（引号里写你的提交说明）
+git commit -m "添加 AI 对话模块"
+
+# 3. 推送到 GitHub
+git push origin main吗？？
+
+
+
