@@ -2,7 +2,7 @@ from openai import OpenAI
 
 # 1. 用你的密钥初始化客户端
 client = OpenAI(
-    api_key="你的API密钥", # 这里换成你自己的Key
+    api_key="sk-069918c0cfab487d84a083814b2c1c5b", # 这里换成你自己的Key
     base_url="https://api.deepseek.com" # DeepSeek的官方地址
 )
 
